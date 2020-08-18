@@ -170,6 +170,7 @@ defmodule PdfGenerator do
   A5. Defaults to A4 sizes. In inches. Because chrome wants imperial.
   """
   def dimensions_for(%{page_width: width, page_height: height}), do: {width, height}
+  def dimensions_for(%{page_size: "A2"}),                        do: {"16.53544", "23.39"}
   def dimensions_for(%{page_size: "A4"}),                        do: {"8.26772", "11.695"}
   def dimensions_for(%{page_size: "A5"}),                        do: {"5.8475",  "8.26772"}
   def dimensions_for(%{page_size: "letter"}),                    do: {"8.5",     "11"}
